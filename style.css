@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400&display=swap');
+
+:root {
+    font-size: 62.5%;
+    --black: #080808;
+    --green: #68f74c;
+    --purple: #c30dd4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 1.6rem;
+    font-family: 'Unbounded', sans-serif;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-areas: "menu menu" "elementos textos" "footer footer";
+}
+
+.menu, .elementos, .textos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.menu {
+    padding: 3rem;
+    grid-area: menu;
+    background-color: white;
+}
+
+.menu a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.elementos {
+    grid-area: elementos;
+    background-color: var(--green);
+}
+
+.elementos svg {
+    width: 15rem;
+}
+
+.textos {
+    grid-area: textos;
+    background-color: var(--purple);
+}
+
+.textos p {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--black);
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    text-align: center;
+    color: white;
+}
+
+@media only screen and (max-width: 768px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu, .elementos, .textos {
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    .menu {
+        gap: 3rem;
+    }
+
+    footer {
+        padding: 3rem;
+    }
+}

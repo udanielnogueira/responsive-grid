@@ -1,2 +1,3 @@
 # responsive-grid
-Estudo de responsividade usando flexbox, grid e media query.
+
+Testes iniciais de responsividade com grid, flexbox e media query.
